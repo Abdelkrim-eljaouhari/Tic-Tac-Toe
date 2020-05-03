@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/bd69e2145b.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Tic Tac toe</title>
   </head>
   <body>
@@ -19,7 +23,23 @@
             <button>Easy</button>
             <button>Hard</button>
           </div>
-          <div class="right">score : <span></span></div>
+          <div class="right">leader : <span class="leader"></span></div>
+        </div>
+        <div class="game__middle">
+          <div class="switcher">
+            <span>computer</span>
+            <span>player</span>
+            <span class="spanmoved"></span>
+          </div>
+          <div class="playwith">
+            <span class="players">Player 1 </span>
+            <span class="players">Player 2</span>
+            <i class="fas fa-caret-down turn-icon left"></i>
+          </div>
+        </div>
+        <div class="score">
+          <span class="scores">0</span>
+          <span class="scores">0</span>
         </div>
         <div class="game__footer">
           <div></div>
@@ -32,7 +52,14 @@
           <div></div>
           <div></div>
         </div>
+        <div class="win-box" id="win-box">
+          <div>
+            <h1 id="winnerIs">The winner is</h1>
+            <button id="restart">Restart</button>
+          </div>
+        </div>
       </div>
     </main>
+    <script src="js/index.js"></script>
   </body>
 </html>

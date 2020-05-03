@@ -17,6 +17,7 @@ body {
   justify-content: center;
 }
 
+/* The parent */
 .ticTac {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
@@ -34,6 +35,7 @@ h1 {
   color: #d2a6a8;
   font-weight: bold;
 }
+/* Game header */
 .game__header {
   display: flex;
   justify-content: space-between;
@@ -61,17 +63,122 @@ h1 {
 }
 .right span {
   display: inline-block;
-  padding: 16px;
+  padding: 10px;
   border: 2px solid #1f1e1e;
   vertical-align: middle;
   background-color: white;
+  color: black;
 }
+/* Game middle switch & playwith */
+.game__middle {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+.game__middle .switcher {
+  color: black;
+  padding: 4px 10px;
+  background-color: white;
+  font-size: 12px;
+  position: relative;
+  height: 17px;
+}
+.game__middle .switcher span {
+  width: 60px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.game__middle .switcher span:nth-child(2) {
+  text-align: right;
+}
+.game__middle .switcher span:nth-child(3) {
+  position: absolute;
+  background-color: #f29f4a99;
+  left: 0;
+  top: 0;
+  width: 72px;
+  height: 100%;
+}
+.playwith {
+  position: relative;
+  padding-top: 10px;
+}
+.turn-icon {
+  position: absolute;
+  top: 0;
+  transform: left 0.2s linear;
+}
+.turn-icon.left {
+  left: 24px;
+}
+.turn-icon.right {
+  left: calc(100% - 45px);
+}
+
+.playwith span:nth-child(1) {
+  border-right: 4px solid black;
+  padding-right: 6px;
+}
+.score {
+  width: 151px;
+  border: 2px solid #00000042;
+  margin-left: auto;
+}
+.score span:first-child {
+  border-right: 2px solid black;
+}
+.score span {
+  width: 47%;
+  display: inline-block;
+}
+/* Game footer */
 .game__footer {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 4px;
+  background-color: #8e44ada1;
 }
 .game__footer div {
   height: 118px;
-  border: 2px solid white;
+  border: 2px solid #ffffffbd;
+  font-size: 145px;
+  width: 117px;
+  line-height: 64%;
+  cursor: pointer;
+}
+
+.win-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+}
+.win-box.show {
+  display: block;
+}
+.win-box div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+}
+.win-box button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.win-box button:hover {
+  background-color: white;
+  color: black;
 }
